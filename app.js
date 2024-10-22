@@ -1,11 +1,13 @@
-function helloConsole() {
-    console.log("Привет, мир!")
+let myName = "Павел";
+
+function helloConsole(greeting) {
+    console.log(`Привет, ${greeting}!`)
 }
 
-helloConsole();
+helloConsole(myName);
 
-function helloAlert() {
-    alert("Привет, мир!");
+function helloAlert(greeting) {
+    alert(`Привет, ${greeting}!`);
 }
 
-helloAlert();
+helloAlert(myName);
