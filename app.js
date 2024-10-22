@@ -3,3 +3,9 @@ function helloConsole() {
 }
 
 helloConsole();
+
+function helloAlert() {
+    alert("Привет, мир!");
+}
+
+helloAlert();
