@@ -35,12 +35,12 @@ try {
   }
 }
 
-let isCancelled = false; //также ранее использовалась отмена промиса через пользовательские флаги (булевую переменную)
+let isCancelled = false; //также ранее использовалась отмена промиса 
+//через пользовательские флаги (булевую переменную)
 </pre>
 </p>
 <h3>3) Написать по 2 примера создания примитивных значений (если есть несколько способов - использовать) (string, number, boolean, null, undefined, symbol, bigInt)</h3>
 <p>
-<pre>
 //String
 const str1 = 'Hello';
 const str2 = String('World'); //также вариации кавычек - двойные, одинарные и обратные
@@ -67,31 +67,17 @@ const sym2 = Symbol();
 //BigInt
 const bigInt1 = 123456789012345678901234567890n;
 const bigInt2 = BigInt('123456789012345678901234567890');
-</pre>
 </p>
 <h3>4) Почему, если обратиться к переменным созданным через let, const до их объявления - мы получаем ReferenceError?</h3>
 <p>Переменные, объявленные с помощью let и const, находятся во временной мёртвой зоне (Temporal Dead Zone) от начала их области видимости до момента их инициализации. Они недоступны до того, как интерпретатор достигнет строки их объявления, а попытка доступа к таким переменным до их объявления приводит к ReferenceError. Это поведение предотвращает возможные ошибки, связанные с использованием необъявленных или неинициализированных переменных.</p>
-<h3>5) Решить: 
-	<pre>
-		const res = "B" + "a" + (1 - "hello");
-		console.log(res); //
-
-		const res2 = (true && 3) + "d";
-		console.log(res2); //
-
-		const res3 = Boolean(true && 3) + "d";
-		console.log(res3); //
-	</pre>
-</h3>
+<h3>5) Решить:</h3>
 <p>
-	<pre>
-		const res = "B" + "a" + (1 - "hello");
-		console.log(res); // "BaNaN"
+const res = "B" + "a" + (1 - "hello");
+console.log(res); // "BaNaN"
 
-		const res2 = (true && 3) + "d";
-		console.log(res2); // "3d"
+const res2 = (true && 3) + "d";
+console.log(res2); // "3d"
 
-		const res3 = Boolean(true && 3) + "d";
-		console.log(res3); // "trued"
-	</pre>
+const res3 = Boolean(true && 3) + "d";
+console.log(res3); // "trued"
 </p>
